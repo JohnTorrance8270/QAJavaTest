@@ -1,0 +1,20 @@
+
+public class Game 
+{
+	World world;
+	
+	Game()
+	{
+		world = new World();
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		
+	}
+}

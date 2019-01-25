@@ -1,0 +1,29 @@
+
+public class Game 
+{
+	World world;
+	Player player;
+	
+	Game()
+	{
+		world = new World();
+		//player = new Player();
+		
+		String s = this.getClass().toString();
+		String[] ss = s.split(" ");
+		System.out.println(s);
+		
+		OutputController.startResponse();
+		world.playerMoveTurn();
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		
+	}
+}

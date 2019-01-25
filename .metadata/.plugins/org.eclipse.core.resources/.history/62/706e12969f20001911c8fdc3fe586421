@@ -1,0 +1,22 @@
+
+public class Game 
+{
+	Player player;
+	
+	Game()
+	{
+		player = new Player(100, 10, 10);
+			
+		//world.playerMoveTurn();
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		
+	}
+}

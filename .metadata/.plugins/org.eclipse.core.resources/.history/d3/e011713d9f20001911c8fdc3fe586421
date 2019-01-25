@@ -1,0 +1,24 @@
+
+public class Game 
+{
+	Player player;
+	
+	Game()
+	{
+		world = new World();
+		//player = new Player();
+			
+		OutputController.startResponse();
+		world.playerMoveTurn();
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		
+	}
+}

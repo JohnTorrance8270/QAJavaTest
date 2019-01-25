@@ -1,0 +1,5 @@
+
+public class enumWorldObjects 
+{
+	public enum worldObjects {Nothing, Enemy, Chest, Choice, Boss, StartPoint, Exit};
+}

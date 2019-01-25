@@ -1,0 +1,14 @@
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Utility 
+{
+	public static int returnRandInt()
+	{
+		return ThreadLocalRandom.current().nextInt(20, 100);
+	}
+	
+	public static int returnRandInt()
+	{
+		return ThreadLocalRandom.current().nextInt(20, 100);
+	}
+}

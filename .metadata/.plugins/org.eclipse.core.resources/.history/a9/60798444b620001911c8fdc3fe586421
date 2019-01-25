@@ -1,0 +1,192 @@
+
+public class OutputController 
+{
+	private static void outputMessage(String[] message)
+	{
+		for(String s : message)
+		{
+			System.out.println(s);
+		}
+	}
+	
+	public static void outputMessage(String message)
+	{
+		System.out.println(message);
+	}
+	
+	public static void nothingResponse()
+	{
+		int messageLength = 2;
+		String[] nothingMessage = new String[messageLength];
+		
+		nothingMessage[0] = "There is nothing here, just more grey lifeless water";
+		nothingMessage[1] = "The sound of distant creatures howling at one another is the only break in the utter silence this location provides";
+		
+		outputMessage(nothingMessage);
+	}
+	
+	public static void enemyResponse()
+	{
+		int messageLength = 3;
+		String[] enemyMessage = new String[messageLength];
+		
+		enemyMessage[0] = "An enemy orc stands before you!";
+		enemyMessage[1] = "Hes very annoyed and isnt in the mood to talk.";
+		enemyMessage[2] = "Run or Fight, its the only way to do deal with this threat";
+		
+		outputMessage(enemyMessage);
+	}
+	
+	public static void chestResponse()
+	{
+		int messageLength = 4;
+		String[] chestMessage = new String[messageLength];
+		
+		chestMessage[0] = "While moving around in the water, you crash into something just underneath the surface of the water";
+		chestMessage[1] =  "Upon closer inspection you notice its a shiny chest! What a lucky encounter!";
+		chestMessage[2] =  "However its not all good news, its bogged down in the mud, who knows how long it will take to free it";
+		chestMessage[3] = "In this unknown land of danger and death, will you risk it all for this chest, for this unknown reward?";
+		
+		outputMessage(chestMessage);
+	}
+	
+	public static void choiceResponse()
+	{
+		int messageLength = 5;
+		String[] choiceMessage = new String[messageLength];
+		
+		choiceMessage[0] = "As you continue your travels you notice that up ahead the path you have been following in this area splits";
+		choiceMessage[1] = "Looking into the distance you can clearly see that they rejoin again, and will not alter your intended route";
+		choiceMessage[2] = "However both routes go through very different terrain, the first through a dense forest, you cannot see inside it from here";
+		choiceMessage[3] = "The other path is out in the open, though the water level seems to rise in certain places";
+		choiceMessage[4] = "You must choose, the left path through the raised water or to the right, where a forest awaits";
+				
+		outputMessage(choiceMessage);
+	}
+	
+	public static void bossResponse()
+	{
+		int messageLength = 5;
+		String[] bossMessage = new String[messageLength];
+		
+		bossMessage[0] = "You notice a small hill up ahead that doesnt much the surrounding terrain";
+		bossMessage[1] = "Its bright blue, whereas everything else has been a consistant green or grey or mix of the two";
+		bossMessage[2] = "Its both refreshing and curious, you approach it with caution, studying the hill for more clues or reasons for its unique colour";
+		bossMessage[3] = "Suddenly the hill's centre moved up and down, starlted you freeze and consider what you saw";
+		bossMessage[4] = "Uncertain of what is going on, you are forced to make a choice, investigate or move around this hill"; 
+				
+		outputMessage(bossMessage);
+	}
+	
+	public static void startResponse()
+	{
+		int messageLength = 5;
+		String[] startMessage = new String[messageLength];
+		
+		startMessage[0]	= "You awake in a strange land, its very different from what you are used to,";
+		startMessage[1]	= "The plants and even the ground itself are made up of colours and configurations that are unknown to you, that are impossible to describe. ";
+		startMessage[2]	= "Looking into the sky its even worse than just a strange land, its infact a different world altogether from your own!";
+		startMessage[3]	= "With three moons, two of which had clearly crashed in to one another some time ago, its clear that this isnt your home.";
+		startMessage[4] = "With limited food and no idea what this world holds for you, you must press on and survive, if you can.";
+		
+		outputMessage(startMessage);
+	}
+	
+	public static void revisitStartResponse()
+	{
+		int messageLength = 2;
+		String[] revisitStartMessage = new String[messageLength];
+		
+		revisitStartMessage[0] = "This is where you started, your back to square one";
+		revisitStartMessage[1]	= "Its still just as cold and depressing as before, nothing new is here"; 
+		
+		outputMessage(revisitStartMessage);
+	}
+	
+	public static void exitResponse()
+	{
+		int messageLength = 6;
+		String[] exitMessage = new String[messageLength];
+		
+		exitMessage[0] = "You notice an unlikely sight ahead, however odd things ahead are commonplace here.";
+		exitMessage[1] = "So you dont trust your eyes at first, choosing to approach ever ready instead, for the twist or surprise danger."; 
+		exitMessage[2] = "As you get closer and closer it becomes harder and harder to surpress the feelings of joy and hope,";
+		exitMessage[3] = "It is actually real! you burst out saying in joy, before you is a functional escape pad, a way out of the horror!";
+		exitMessage[4] = "Using the simple interface you plot your way home, enter the pad and put all your fears and troubles to rest.";
+		exitMessage[5] = "Against the odds you made it home! Well done!";
+		
+		outputMessage(exitMessage);
+	}
+	
+	public static void errorResponse(String location)
+	{
+		int messageLength = 1;
+		String[] errorMessage = new String[messageLength];
+		
+		errorMessage[0] = "An Error Has Occured With " + location;
+		
+		outputMessage(errorMessage);
+	}
+	
+	public static void attackDrawResponse(String playerChoice, String enemyChoice)
+	{
+		int messageLength = 2;
+		String[] drawMessage = new String[messageLength];
+		
+		drawMessage[0] = "You choice of " + playerChoice + " was matched by the enemy's " + enemyChoice;
+		drawMessage[1] = "Draw!";
+		
+		outputMessage(drawMessage);
+	}
+	
+	public static void enemyAttackWinResponse(String playerChoice, String enemyChoice)
+	{
+		int messageLength = 3;
+		String[] enemyWinMessage = new String[messageLength];
+
+		enemyWinMessage[0] = "Your attack, " + playerChoice + " failed to do much but tire you out.";
+		enemyWinMessage[1] = "The enemy in response hits hard, his " + enemyChoice + " attack is fast and effective";
+		enemyWinMessage[2] = "You see the attack coming but can do little to avoid it, it lands true and deals a painful blow!";
+		
+		outputMessage(enemyWinMessage);
+	}
+	
+	public static void playerAttackWinResponse(String playerChoice, String enemyChoice)
+	{
+		int messageLength = 3;
+		String[] playerWinMessage = new String[messageLength];
+		
+		playerWinMessage[0] = "The enemy foolishly tried to hit you with his " + enemyChoice + ".";
+		playerWinMessage[1] = "Which served to only amuse you as you dodge with ease, as the creature stumbled around";
+		playerWinMessage[2] = "You seize the moment and counter attack with " + playerChoice + " dealing a powerful blow!";
+		
+		outputMessage(playerWinMessage);
+	}
+	
+	public static void defeatedResponse()
+	{
+		int messageLength = 2;
+		String[] deathMessage = new String[messageLength];
+		
+		deathMessage[0] = "Sadly you have died, the adventure this time was too much.";
+		deathMessage[1] = "But not to worry you can always try again.... if you dare";
+		
+		outputMessage(deathMessage);
+	}
+	
+	public static void combatVictory()
+	{
+		int messageLength = 2;
+		String[] winMessage = new String[messageLength];
+		
+		winMessage[0] = "You won the battle!";
+		winMessage[1] = "The defeated enemy is motionless as you prepare to continue your adventure";
+		
+		outputMessage(winMessage);
+	}
+	
+	public static void didItGoWell()
+	{
+		
+	}
+}

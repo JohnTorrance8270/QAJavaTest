@@ -1,0 +1,19 @@
+
+public class Game 
+{
+	World world;
+	Game()
+	{
+		
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		
+	}
+}

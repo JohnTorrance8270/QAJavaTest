@@ -1,0 +1,19 @@
+
+public class Enemy extends Humanoid
+{
+	Enemy(int health, int attackLevel, int defenseLevel)
+	{
+		super(health, attackLevel, defenseLevel);
+	}
+	
+	public string enemyAttackChoice()
+	{
+		String randEnemyChoice = null;
+		switch(Utility.returnRandInt(0, 2))
+		{
+		
+		}
+		
+		return randEnemyChoice;
+	}
+}

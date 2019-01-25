@@ -1,0 +1,25 @@
+
+public class Game 
+{
+	Player player;
+	
+	Game()
+	{
+		OutputController.startResponse();
+		player = new Player(100, 10, 10);
+	}
+	
+	public void run()
+	{
+		update();
+	}
+	
+	private void update()
+	{
+		if (Player.isGameover)
+		{
+			player.cleanup();
+			player = null;
+		}
+	}
+}

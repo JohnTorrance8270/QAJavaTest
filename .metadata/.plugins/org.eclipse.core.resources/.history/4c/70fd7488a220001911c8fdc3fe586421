@@ -1,0 +1,31 @@
+
+public class Enemy extends Humanoid
+{
+	Enemy(int health, int attackLevel, int defenseLevel)
+	{
+		super(health, attackLevel, defenseLevel);
+	}
+	
+	public String enemyAttackChoice()
+	{
+		String randEnemyChoice = null;
+		
+		switch(Utility.returnRandInt(0, 2))
+		{
+			case 0:
+			randEnemyChoice = "sword";
+			break;
+			case 1:
+			randEnemyChoice = "lance";
+			break;
+			case 2:
+			randEnemyChoice = "shield";
+			break;
+			default:
+			randEnemyChoice = "An Error Ocured";
+			break;
+		}
+		
+		return randEnemyChoice;
+	}
+}

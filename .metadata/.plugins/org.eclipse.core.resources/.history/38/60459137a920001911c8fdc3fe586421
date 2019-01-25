@@ -1,0 +1,47 @@
+
+public abstract class Humanoid 
+{
+	private int health;
+	private int attackLevel;
+	private int defenseLevel;
+	protected String attackChosen;
+	protected static boolean isGameover = false;
+	
+	Humanoid(int health, int attackLevel, int defenseLevel)
+	{
+		this.health = health;
+		this.attackLevel = attackLevel;
+		this.defenseLevel = defenseLevel;
+	}
+	
+	public int getHealth()
+	{
+		return this.health;
+	}
+	
+	public void resolveCombatRound(Humanoid enemy)
+	{
+		if(this.attackChosen.equals(enemy.attackChosen))
+		{
+			OutputController.attackDrawResponse(this.attackChosen, enemy.attackChosen);
+		}
+		else if(enemy.attackChosen.equals("sword") && (this.attackChosen.equals("lance")))
+		{
+			OutputController.enemyAttackWinResponse(this.attackChosen, enemy.attackChosen);
+		}
+		else
+		{
+			OutputController.playerAttackWinResponse(this.attackChosen, enemy.attackChosen);
+		}
+		
+		enemy.health -= attackLevel;
+	}
+	
+	protected String getCombatParams(Humanoid humanoid)
+	{
+		String className = humanoid.getClass().toString();
+		String[] classVarName = className.split(" ");
+		
+		return classVarName[1] + ": " + "Health: " + humanoid.health;
+	}
+}
